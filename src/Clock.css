@@ -1,0 +1,99 @@
+.clock {
+  /* Diğer stil kuralları */
+  padding: 20px;
+  border-radius: 20px;
+}
+.clock h2 {
+  margin-top: 70px;
+  margin-bottom: 0px;
+  font-weight: 900;
+}
+
+.timelist {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.daytime {
+  background-color: #d0e6ff;
+  color: #333333;
+  background-image: url(./assets/day.svg);
+  background-position: center 10px;
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+
+.nighttime {
+  background-color: #020742;
+  color: #fff;
+  background-image: url(./assets/night.svg);
+  background-position: center 10px;
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+.timezone {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.hours {
+  color: #fff;
+  background-color: #000;
+}
+
+.nighttime .hours,
+.nighttime .minutes,
+.nighttime .seconds {
+  color: #000;
+  background-color: #fff;
+}
+
+.minutes {
+  color: #fff;
+  background-color: #000;
+}
+
+.seconds {
+  color: #fff;
+  background-color: #000;
+}
+.hours,
+.minutes,
+.seconds {
+  font-size: 18px;
+  font-weight: 600;
+  min-width: 35px;
+  border-radius: 5px;
+  display: inline-block;
+}
+span.ampm {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .timelist {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .timelist {
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .timelist {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
